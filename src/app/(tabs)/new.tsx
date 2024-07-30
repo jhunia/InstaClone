@@ -1,5 +1,5 @@
 import { Text } from 'react-native';
 
-export default function About (){
-    return <Text>Hey you!</Text>;
+export default function CreatePost (){
+    return <Text>Create Post</Text>;
 }
