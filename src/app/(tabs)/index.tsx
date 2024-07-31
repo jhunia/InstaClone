@@ -1,11 +1,21 @@
-import { Text , View} from 'react-native';
+import { Text , View , Image, FlatList} from 'react-native';
+import posts from '~/assets/data/post.json';
+import{Ionicons , Feather, AntDesign} from '@expo/vector-icons'
+import PostListItem from '~/src/components/PostListItem';
+
 
 export default function FeedScreen (){
-    return (
-    <View className="bg-slate-600 flex-1 items-center justify-center m-10">
-           <Text className="text-4xl font-bold text-blue-500">Feed screen</Text>
-    </View>
- 
 
-);
+
+        return (
+            <FlatList
+            data={posts}
+            contentContainerStyle={{gap:10}}
+            renderItem={( {item }) => <PostListItem post={item} />}
+            showsVerticalScrollIndicator={false}
+        />
+    )
+
+
+
 }
